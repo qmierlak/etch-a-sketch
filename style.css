@@ -1,6 +1,9 @@
-.square {
+.cell {
     height:200px;
     width:200px;
     background-color: black;
     margin: 16px;
+}
+.row {
+    display: flex;
 }
