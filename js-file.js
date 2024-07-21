@@ -22,6 +22,14 @@ for (let row = 0; row < 16; row++) {
     for (let i = 0; i < 16; i++) {
         const cellDiv = document.createElement('div');
         cellDiv.setAttribute("class", "cell");
+        cellDiv.addEventListener("mouseenter", (event) => {
+            event.target.style.backgroundColor = "blue";
+
+            // reset the color after a short delay
+            setTimeout(() => {
+                event.target.style.backgroundColor = "black";
+            }, 5000);
+        });
         rowDiv.appendChild(cellDiv);
     }
     containerLink.appendChild(rowDiv);
